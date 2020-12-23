@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController 
+    before_action :require_login
+
     def homepage 
-        redirect_to '/login' unless current_user
     end 
 end 
