@@ -7,6 +7,7 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         redirect_to '/signup' unless @user.save
         session[:user_id] = @user.id
+        render 'homepage_path'
     end
 
     private 
